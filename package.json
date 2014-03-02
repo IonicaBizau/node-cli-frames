@@ -1,6 +1,6 @@
 {
   "name": "ascii-frames",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create ASCII animations in Terminal using ASCII frames.",
   "main": "index.js",
   "scripts": {
