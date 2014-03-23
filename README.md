@@ -63,5 +63,13 @@ animation.startAnimation({
 });
 ```
 
+## How to test
+
+```sh
+$ npm install ascii-frames
+$ cd node_modules
+$ npm test
+```
+
 ## License
 See the LICENSE file.
