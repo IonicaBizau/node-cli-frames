@@ -8,11 +8,11 @@ Create ASCII animations in Terminal using ASCII frames.
 ### `loadFrames (options)`
 
  The `options` parameter is an **array** of strings representing the frames.
- 
+
  In the future it will can be an **object**.
- 
+
 ### `startAnimation (options)`
- 
+
  The `options` parameter is an **object** containing the following fields:
    - `frameDelay`: (number) the delay in miliseconds
    - `repeat`: (boolean) repeat animation after end
@@ -70,6 +70,14 @@ $ npm install ascii-frames
 $ cd node_modules
 $ npm test
 ```
+
+## Changelog
+
+### v0.1.1
+ - Fixed the condition for animation end when repeat is not `true`
+
+### v0.1.0
+ - Initial release
 
 ## License
 See the LICENSE file.
