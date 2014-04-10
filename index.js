@@ -71,7 +71,7 @@ var AsciiFrames = function (options) {
                     console.log(self._frames[++cFrame % frameCount]);
 
                     // animation finished
-                    if (cFrame > frameCount && !repeat) {
+                    if (cFrame >= frameCount && !repeat) {
 
                         // clear the interval
                         clearInterval(animation);
