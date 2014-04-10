@@ -73,7 +73,7 @@ $ npm test
 
 ## Changelog
 
-### v0.1.1
+### v0.1.2
  - Fixed the condition for animation end when repeat is not `true`
 
 ### v0.1.0
