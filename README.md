@@ -73,6 +73,9 @@ $ npm test
 
 ## Changelog
 
+### v0.2.0
+ - Use `process.stdout` instead of `console.log`.
+
 ### v0.1.2
  - Fixed the condition for animation end when repeat is not `true`
 
