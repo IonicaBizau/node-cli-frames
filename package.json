@@ -14,7 +14,8 @@
     "ascii",
     "frames",
     "animations",
-    "terminal"
+    "terminal",
+    "cli"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com>",
   "license": "MIT",
