@@ -106,9 +106,11 @@ Starts the CLI animation.
 # Changelog
 ## `1.0.0`
  - Refactored the code.
- - Replaced `loadFrames` with `load`.
- - Replaced `startAnimation` with `start`.
+ - Replaced `loadFrames` with load.
+ - Replaced `startAnimation` with start.
  - Added the enchantment to pass options to constructor function.
+ - Added `cli-update` as dependency. Fixes #3.
+ - Renamed the package: `cli-frames` (the old name was `ascii-frames`).
 
 ## `v0.2.0`
  - Use `process.stdout` instead of `console.log`.
