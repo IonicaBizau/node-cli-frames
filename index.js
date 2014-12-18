@@ -53,6 +53,8 @@ var CliFrames = module.exports = function (opt_options) {
         options = Object(options);
         options.delay = Number(options.delay || 100);
 
+        process.stdout.write("\u001b[2J\u001b[0;0H");
+
         var cFrame = 0
           , frameCount = self.frames.length
           , repeat = Boolean(options.repeat)
@@ -66,6 +68,7 @@ var CliFrames = module.exports = function (opt_options) {
         return CliFrames;
     };
 
+    // Handle opt_options
     if (opt_options.frames) {
         self.load(opt_options.frames);
     }
