@@ -1,41 +1,33 @@
-// frames
-var frames = [
-        "╔════╤╤╤╤════╗\n" +
-        "║    │││ \\   ║\n" +
-        "║    │││  O  ║\n" +
-        "║    OOO     ║",
+// Dependencies
+var AsciiFrames = require("../index");
 
-        "╔════╤╤╤╤════╗\n" +
-        "║    ││││    ║\n" +
-        "║    ││││    ║\n" +
-        "║    OOOO    ║",
+// Frames
+const frames = [
+    "╔════╤╤╤╤════╗\n" +
+    "║    │││ \\   ║\n" +
+    "║    │││  O  ║\n" +
+    "║    OOO     ║",
 
-        "╔════╤╤╤╤════╗\n" +
-        "║   / │││    ║\n" +
-        "║  O  │││    ║\n" +
-        "║     OOO    ║",
+    "╔════╤╤╤╤════╗\n" +
+    "║    ││││    ║\n" +
+    "║    ││││    ║\n" +
+    "║    OOOO    ║",
 
-        "╔════╤╤╤╤════╗\n" +
-        "║    ││││    ║\n" +
-        "║    ││││    ║\n" +
-        "║    OOOO    ║"
-    ]
+    "╔════╤╤╤╤════╗\n" +
+    "║   / │││    ║\n" +
+    "║  O  │││    ║\n" +
+    "║     OOO    ║",
 
-    // require the library
-  , AsciiFrames = require("../index")
+    "╔════╤╤╤╤════╗\n" +
+    "║    ││││    ║\n" +
+    "║    ││││    ║\n" +
+    "║    OOOO    ║"
+];
 
-    // create a new instance
-  , animation = new AsciiFrames ();
-
-// load frames
-animation.loadFrames(frames);
-
-// and start animation
-animation.startAnimation({
-
-    // repeat
+// Create the animation
+var animation = new AsciiFrames();
+animation.load(frames);
+animation.start({
     repeat: true
-
-    // 250 ms
-  , frameDelay: 250
+  , delay: 250
 });
