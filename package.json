@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/IonicaBizau/cli-frames"
+    "url": "http://github.com/IonicaBizau/node-cli-frames"
   },
   "keywords": [
     "ascii",
@@ -20,9 +20,9 @@
   "author": "Ionică Bizău <bizauionica@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IonicaBizau/cli-frames/issues"
+    "url": "https://github.com/IonicaBizau/node-cli-frames/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/cli-frames",
+  "homepage": "https://github.com/IonicaBizau/node-cli-frames",
   "directories": {
     "test": "test"
   },
