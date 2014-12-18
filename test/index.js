@@ -1,5 +1,5 @@
 // Dependencies
-var CliFrames = require("../index");
+var CliFrames = require("../lib");
 
 // Frames
 const frames = [
