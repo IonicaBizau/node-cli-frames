@@ -1,14 +1,14 @@
 {
   "name": "cli-frames",
   "version": "1.0.0",
-  "description": "Create CLI animations in using text frames.",
+  "description": "Create CLI animations using text frames.",
   "main": "lib/index.js",
   "scripts": {
     "test": "node test"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/IonicaBizau/ascii-frames"
+    "url": "http://github.com/IonicaBizau/cli-frames"
   },
   "keywords": [
     "ascii",
@@ -19,9 +19,9 @@
   "author": "Ionică Bizău <bizauionica@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IonicaBizau/ascii-frames/issues"
+    "url": "https://github.com/IonicaBizau/cli-frames/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/ascii-frames",
+  "homepage": "https://github.com/IonicaBizau/cli-frames",
   "directories": {
     "test": "test"
   },
