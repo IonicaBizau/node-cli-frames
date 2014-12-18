@@ -29,7 +29,7 @@ var CliFrames = module.exports = function (opt_options) {
      * @param {Object} options An array of strings representing the animation frames.
      * @return {CliFrames} The CliFrames instance.
      */
-    self.load = function(options) {
+    self.load = function (options) {
         if (!Array.isArray(options)) { throw new Error("First argument must be an array of strings."); }
         self.frames = options;
         return self;
@@ -48,22 +48,34 @@ var CliFrames = module.exports = function (opt_options) {
      *
      * @return {CliFrames} The CliFrames instance.
      */
-    self.start = function(options) {
+    self.start = function (options) {
 
         options = Object(options);
         options.delay = Number(options.delay || 100);
+        options.end = options.end || function (err) {
+            if (err) {
+                console.log(err);
+            }
+        };
 
         process.stdout.write("\u001b[2J\u001b[0;0H");
 
-        var cFrame = 0
+        var cFrame = -1
           , frameCount = self.frames.length
-          , repeat = Boolean(options.repeat)
+          ;
+
+        CliUpdate.render(self.frames[++cFrame % frameCount]);
+
+        var repeat = Boolean(options.repeat)
           , animation = setInterval(function() {
-                CliUpdate.render(self.frames[++cFrame % frameCount]);
-                if (cFrame >= frameCount && !repeat) {
+                if (++cFrame >= frameCount && !repeat) {
                     clearInterval(animation);
+                    options.end(null, self.frames);
+                    return;
                 }
-            }, options.delay);
+                CliUpdate.render(self.frames[cFrame % frameCount]);
+            }, options.delay)
+          ;
 
         return CliFrames;
     };
