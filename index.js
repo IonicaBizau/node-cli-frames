@@ -1,64 +1,76 @@
-// AsciiFrames constructor
-var AsciiFrames = function (options) {
+// Dependencies
+var CliUpdate = require("cli-update");
+
+/**
+ * CliFrames
+ * Creates a new instance of CliFrames.
+ *
+ * @name CliFrames
+ * @function
+ * @param {Object} opt_options An optional object containing:
+ *
+ *  - `frames` (Array): The frames to be loaded.
+ *  - `autostart` (Object): If provided, the animation will be autostarted.
+ *     The object will be provided to `start` function.
+ *
+ * @return {CliFrames} The CliFrames instance.
+ */
+var CliFrames = module.exports = function (opt_options) {
 
     var self = this;
+    opt_options = Object(opt_options);
 
     /**
-     * loadFrames
+     * load
+     * Loads the animation frames.
      *
-     * This method loads the frames that must be animated.
-     *
-     * @param options: an array of strings representing the frames of animation
-     * @return
+     * @name load
+     * @function
+     * @param {Object} options An array of strings representing the animation frames.
+     * @return {CliFrames} The CliFrames instance.
      */
-    self.loadFrames = function (options) {
-
-        // validate options
-        if (!options) { throw new Error ("First argument must be an array or an object."); }
-        if (options.constructor === Array) {
-            self._frames = options;
-        }
-
-        // object
-        if (options.constructor === Object) {
-            throw new Error ("Not yet implemented");
-        }
+    self.load = function(options) {
+        if (!Array.isArray(options)) { throw new Error("First argument must be an array of strings."); }
+        self.frames = options;
+        return self;
     };
 
-    /*
-     *  AsciiFrames#startAnimation (options)
+    /**
+     * start
+     * Starts the CLI animation.
      *
-     *  Start the ASCII animation
-     *  options -> an object containing the following fields
-     *              * frameDelay: time in miliseconds
-     *              * repeat:     boolean
+     * @name start
+     * @function
+     * @param {Object} options An object containing the following fields:
      *
-     * */
-    self.startAnimation = function (options) {
+     *  - `delay` (Number): The frame delay in milliseconds (default: `100`).
+     *  - `repeat` (Boolean): If `true`, the animation will be repeated infinitely.
+     *
+     * @return {CliFrames} The CliFrames instance.
+     */
+    self.start = function(options) {
 
-        // validate options
-        if (!options) { throw new Error ("First argument must be an object."); }
+        options = Object(options);
+        options.delay = Number(options.delay || 100);
 
-        // frame delay
-        options.frameDelay = Number(options.frameDelay);
-
-        console.log("\u001b[2J\u001b[0;0H");
         var cFrame = 0
-          , frameCount = self._frames.length
+          , frameCount = self.frames.length
           , repeat = Boolean(options.repeat)
-          , animation = setInterval(function () {
-
-                // show current frame
-                process.stdout.cursorTo(0, 0);
-                process.stdout.write(self._frames[++cFrame % frameCount]);
-
-                // animation finished
+          , animation = setInterval(function() {
+                CliUpdate.render(self.frames[++cFrame % frameCount]);
                 if (cFrame >= frameCount && !repeat) {
                     clearInterval(animation);
                 }
+            }, options.delay);
 
-            }, options.frameDelay);
+        return CliFrames;
+    };
+
+    if (opt_options.frames) {
+        self.load(opt_options.frames);
+    }
+
+    if (opt_options.autostart) {
+        self.start(opt_options.autostart);
     }
 };
-
-module.exports = AsciiFrames;
