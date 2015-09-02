@@ -4,7 +4,7 @@
   "description": "Create CLI animations using text frames.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "node test"
+    "test": "node example"
   },
   "repository": {
     "type": "git",
