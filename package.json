@@ -29,5 +29,8 @@
   "dependencies": {
     "cli-update": "1.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "blah": {
+      "ex_img": "http://i.imgur.com/RjY2kCn.gif"
+  }
 }
