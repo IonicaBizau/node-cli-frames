@@ -18,19 +18,19 @@
     "cli"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com>",
-  "license": "MIT",
+  "license": "KINDLY",
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-cli-frames/issues"
   },
   "homepage": "https://github.com/IonicaBizau/node-cli-frames",
   "directories": {
-    "test": "test"
+    "example": "example"
   },
   "dependencies": {
-    "cli-update": "1.0.0"
+    "cli-update": "2.0.0"
   },
   "devDependencies": {},
   "blah": {
-      "ex_img": "http://i.imgur.com/RjY2kCn.gif"
+    "ex_img": "http://i.imgur.com/RjY2kCn.gif"
   }
 }
