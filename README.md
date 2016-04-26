@@ -1,16 +1,20 @@
+
 # cli-frames [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/cli-frames.svg)](https://www.npmjs.com/package/cli-frames) [![Downloads](https://img.shields.io/npm/dt/cli-frames.svg)](https://www.npmjs.com/package/cli-frames) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > Create CLI animations using text frames.
 
 [![cli-frames](http://i.imgur.com/RjY2kCn.gif)](#)
 
-## Installation
+## :cloud: Installation
 
 ```sh
 $ npm i --save cli-frames
 ```
 
-## Example
+
+## :clipboard: Example
+
+
 
 ```js
 // Dependencies
@@ -57,7 +61,8 @@ new CliFrames({
 });
 ```
 
-## Documentation
+## :memo: Documentation
+
 
 ### `CliFrames(opt_options)`
 Creates a new instance of CliFrames.
@@ -91,23 +96,22 @@ Starts the CLI animation.
 #### Return
 - **CliFrames** The CliFrames instance.
 
-## How to contribute
+
+
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
+## :dizzy: Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
- - [`audrey-animation`](https://github.com/llucbrell/audrey-animation#readme) by Lucas_C / llucbrell
 
- - [`gif-cli`](https://github.com/IonicaBizau/gif-cli)
+ - [`audrey-animation`](https://github.com/llucbrell/audrey-animation#readme) (by Lucas_C / llucbrell)—audrey scion for animations on the console
+ - [`gif-cli`](https://github.com/IonicaBizau/gif-cli)—Gif animations in your terminal!
+ - [`grumpycat`](https://npmjs.com/package/grumpycat) (by Ayhan Kuru)—grumpycat cli message
+ - [`kamehameha.js`](https://github.com/StreetHub/kamehameha.js)—Bring legendary saiyans to your console.
+ - [`text-animation`](https://github.com/IonicaBizau/text-animation)—Create beautiful ASCII text animations using NodeJS.
 
- - [`grumpycat`](https://npmjs.com/package/grumpycat) by Ayhan Kuru
-
- - [`kamehameha.js`](https://github.com/StreetHub/kamehameha.js)
-
- - [`text-animation`](https://github.com/IonicaBizau/text-animation)
-
-## License
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
