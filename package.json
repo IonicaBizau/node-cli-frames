@@ -1,6 +1,6 @@
 {
   "name": "cli-frames",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Create CLI animations using text frames.",
   "main": "lib/index.js",
   "scripts": {
