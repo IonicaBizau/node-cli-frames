@@ -1,6 +1,6 @@
 {
   "name": "cli-frames",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "Create CLI animations using text frames.",
   "main": "lib/index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "terminal",
     "cli"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-cli-frames/issues"
@@ -37,12 +37,11 @@
     "bin/",
     "app/",
     "lib/",
-    "build/",
     "dist/",
     "src/",
+    "scripts/",
     "resources/",
     "menu/",
-    "scripts/",
     "cli.js",
     "index.js"
   ]
