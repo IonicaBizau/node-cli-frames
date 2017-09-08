@@ -6,6 +6,7 @@ You can see below the API reference of this module.
 Creates a new instance of CliFrames.
 
 #### Params
+
 - **Object** `opt_options`: An optional object containing:
  - `frames` (Array): The frames to be loaded.
  - `autostart` (Object): If provided, the animation will be autostarted.
@@ -18,6 +19,7 @@ Creates a new instance of CliFrames.
 Loads the animation frames.
 
 #### Params
+
 - **Object** `options`: An array of strings representing the animation frames.
 
 #### Return
@@ -27,6 +29,7 @@ Loads the animation frames.
 Starts the CLI animation.
 
 #### Params
+
 - **Object** `options`: An object containing the following fields:
  - `delay` (Number): The frame delay in milliseconds (default: `100`).
  - `repeat` (Boolean): If `true`, the animation will be repeated infinitely.
